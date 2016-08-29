@@ -1,0 +1,14 @@
+.divfold50
+	- @ontechnologies.each do |ontechnology|
+		.divfold50
+			.col-md-3
+				.trybsindexnews
+					= link_to (image_tag ontechnology.ontechnology_img.url(:small))
+			.col-md-9
+				%h3= link_to ontechnology.title, ontechnology
+				= ontechnology.body.first(110) + " " + "....."
+				%br
+				= link_to "read details", ontechnology
+		%hr
+
+				

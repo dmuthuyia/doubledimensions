@@ -1,0 +1,35 @@
+.divfold57 
+	.divfold50
+		%h1= @picture.title
+		%p.username
+		= image_tag @picture.picture_img.url
+		= simple_format(@picture.description)
+			
+		%br
+			
+		%p
+			- if @picture.user == current_user
+				= link_to "Edit", edit_picture_path(@picture)
+				= link_to "Destroy", picture_path(@picture), method: :delete, data: { confirm: "picture will be deleted" }
+
+
+
+		%h1= @picture.title 
+		Description:
+		.divfold56
+			%p= @picture.description
+		qualification:
+		.divfold56
+			%p= @picture.qualification
+		contract_nature:
+		.divfold56
+			%p= @picture.contract_nature
+		salary:
+		.divfold56
+			%p= @picture.salary
+		start_date:
+		.divfold56
+			%p= @picture.start_date
+		application_deadline:
+		.divfold56
+			%p= @picture.application_deadline

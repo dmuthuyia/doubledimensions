@@ -1,0 +1,50 @@
+ <nav class="navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Double Dimensions", root_path, class: "navbar-brand" %>
+      </div>
+      <ul class="navbar-nav nav navbar-right">
+        <% if user_signed_in? %>
+          
+        <% else %>
+          
+        <% end %>
+      </ul>
+      <% if user_signed_in? %>
+        
+
+      <% end %>
+      <ul class="navbar-nav nav navbar-left">
+
+          <li><%= link_to "About us", about_us_path %></li>
+
+
+
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Our Services<span class="caret"></span></a>
+
+                <ul class="dropdown-menu" role="menu">
+                  
+                    <li><%= link_to "Business continuity management", business_continuity_management_path %></li>
+                    <li><%= link_to "Cloud computing", cloud_computing_path %></li>
+                    <li><%= link_to "Project management", project_management_path %></li>
+                    <li><%= link_to "Partnership", partnerships_path %></li>
+                 
+                </ul>
+                </li>
+
+          <li><%= link_to "Tech news", ontechnologies_path %></li>
+          <li><%= link_to "CSR", csr_path %></li>
+          <li><%= link_to "Careers", careers_path %></li>
+
+      </ul>
+
+      <ul class="navbar-nav nav navbar-right">
+
+          <li><%= link_to "Email us" %></li>
+          <li><%= link_to "Call us" %></li>
+
+      </ul>
+
+    </div>
+  </nav>

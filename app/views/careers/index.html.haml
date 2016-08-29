@@ -1,0 +1,22 @@
+.divfold50
+	- @careers.each do |career|
+		.divfold50
+			.col-md-3
+				%p
+				Department:
+				%br
+				= career.advertiser
+				%p
+				Apply before:
+				%br
+				= career.application_deadline
+			.col-md-9
+				%h3= link_to career.title, career
+				= career.description
+				%br
+				= link_to "read details", career
+		%hr
+					
+
+
+				

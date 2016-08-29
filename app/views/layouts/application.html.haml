@@ -1,0 +1,91 @@
+!!!
+%html
+%head
+	%title Tez
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+	= javascript_include_tag 'application', 'data-turbolinks-track' => true
+	= csrf_meta_tags
+
+	= javascript_include_tag 'jquery-1.11.3.min.js', 'data-turbolinks-track' => true
+
+
+	%link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"}
+	%link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"}
+
+
+	
+
+%body
+
+	= render 'layouts/headernav4'
+
+	= render 'layouts/denzbootstrapslider2'
+	
+
+
+	%p.notice= notice
+	%p.alert= alert
+
+	.container
+		.col-md-9
+			= yield
+
+		.col-md-3
+			.row
+				.fireplace2side
+					= social_share_button_tag("doubledimensions")
+					%h2 Contacts
+					%br Norwich Union 7th Flr
+					%br Phone: +254 726 275 304, +254 739 370 900
+					%br P.O BOX 60463-00200 
+					%br Nairobi, Kenya.
+					%br ddimensionsit@gmail.com 
+
+
+			.row
+				.fireplace2side
+					.trybsprofcircle10
+						= link_to image_tag('brands1.png', alt: "Edit Entry"), root_path
+					.trybsprofcircle10
+						= link_to image_tag('brands2.png', alt: "Edit Entry"), root_path
+
+
+
+	.footer1
+		.col-md-4
+			.divfold57
+				%h2 Services
+				%hr
+				%br= link_to "About us", about_us_path
+				%br= link_to "Our Services"
+				%br= link_to "Tech news"
+				%br= link_to "CSR", csr_path
+				%br= link_to "Careers"
+
+		.col-md-4
+			.divfold57
+				%h2 Partners
+				%hr
+				%li= link_to "Infohtech ict Consoutancy Agency", "http://www.infohtechict.com", target: :blank
+		.col-md-4
+			.divfold57
+				%h2 Social media
+				%hr
+				.trybsprofcircle2
+					= link_to image_tag('facebook.png', alt: "Edit Entry"), root_path
+				%br
+				.trybsprofcircle2
+					= link_to image_tag('twitter.png', alt: "Edit Entry"), root_path
+				%br
+				.trybsprofcircle2
+					= link_to image_tag('instagram.png', alt: "Edit Entry"), root_path
+				%br
+				.trybsprofcircle2
+					= link_to image_tag('googleplus.png', alt: "Edit Entry"), root_path
+
+
+	.footer
+		.container
+			%ul.nav.navbar-nav.navbar-right
+				%li= link_to "copyright Double Dimensions © 2016 ", root_path
+				%li= link_to "Partnered: Infohtech ict Consultancy Agency", "http://www.infohtechict.com", target: :blank

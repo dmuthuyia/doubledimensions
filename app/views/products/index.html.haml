@@ -1,0 +1,11 @@
+.row
+	.divfold52
+		- @products.each do |product|
+			.col-md-3
+				.fireplace2
+					= link_to (image_tag product.product_img.url(:small))
+					%h3= link_to product.title, product
+					
+
+
+				

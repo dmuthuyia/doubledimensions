@@ -1,0 +1,29 @@
+.divfold57 
+	.divfold50
+			
+		%p
+			- if @career.user == current_user
+				= link_to "Edit", edit_career_path(@career)
+				= link_to "Destroy", career_path(@career), method: :delete, data: { confirm: "career will be deleted" }
+
+
+
+		%h1= @career.title 
+		Description:
+		.divfold56
+			%p= @career.description
+		qualification:
+		.divfold56
+			%p= @career.qualification
+		contract_nature:
+		.divfold56
+			%p= @career.contract_nature
+		salary:
+		.divfold56
+			%p= @career.salary
+		start_date:
+		.divfold56
+			%p= @career.start_date
+		application_deadline:
+		.divfold56
+			%p= @career.application_deadline

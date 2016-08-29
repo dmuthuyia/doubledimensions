@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  advertiser: MyString
+  title: MyString
+  description: MyText
+  qualification: MyText
+  contract_nature: MyString
+  salary: 9.99
+  start_date: 2016-08-25 12:31:53
+  application_deadline: 2016-08-25 12:31:53
+
+two:
+  advertiser: MyString
+  title: MyString
+  description: MyText
+  qualification: MyText
+  contract_nature: MyString
+  salary: 9.99
+  start_date: 2016-08-25 12:31:53
+  application_deadline: 2016-08-25 12:31:53

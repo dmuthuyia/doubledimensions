@@ -1,0 +1,15 @@
+.divfold57 
+	.divfold50
+		%h1= @ontechnology.title
+		%p.username
+		= image_tag @ontechnology.ontechnology_img.url
+		= simple_format(@ontechnology.body)
+		%p= @ontechnology.url
+			
+		%br
+			
+		%p
+			- if @ontechnology.user == current_user
+				= link_to "Edit", edit_ontechnology_path(@ontechnology)
+				= link_to "Destroy", ontechnology_path(@ontechnology), method: :delete, data: { confirm: "ontechnology will be deleted" }
+
