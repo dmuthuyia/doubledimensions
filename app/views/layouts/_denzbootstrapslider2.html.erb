@@ -66,19 +66,19 @@
                           height: 360px;
                         }
 
-                        
+                        /*
                         .item:nth-child(1) {
-                          background: #0c0f4a;
+                          background: blue;
                         }
 
                         .item:nth-child(2) {
-                          background: #0c0f4a;
+                          background: red;
                         }
 
                         .item:nth-child(3) {
-                          background: #0c0f4a;
+                          background: orange;
                         }
-                        
+                        */
 
 
             </style>
@@ -99,19 +99,22 @@
             <div class="item active">
             <%= link_to image_tag('tezhome4b.png', alt: "Edit Entry"), root_path, class: 'trybsresponsepics'  %>
                 <div class="carousel-caption">
-                caption 1
+                <%= link_to "About us", about_us_path, class: "button" %>
                 </div>
             </div>
             <div class="item">
             <%= link_to image_tag('personaloutdoorbanner4.png', alt: "Edit Entry"), root_path, class: 'trybsresponsepics'  %>
                 <div class="carousel-caption">
-                    caption 2
+                    <%= link_to "Cloud computing", cloud_computing_path, class: "button" %>
+                    |
+                    <%= link_to "Business continuity management", business_continuity_management_path, class: "button" %>
                 </div>
             </div>
             <div class="item">
             <%= link_to image_tag('corporatebanner4.png', alt: "Edit Entry"), root_path, class: 'trybsresponsepics'  %>
                 <div class="carousel-caption">
-                    caption 3
+                    <%= link_to "Partnership", partnerships_path, class: "button" %>
+                    <%= link_to "Project management", project_management_path, class: "button" %>
                 </div>
             </div>
         </div>
